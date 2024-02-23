@@ -33,5 +33,23 @@ public class TestLoginPage extends DriverScript {
 		homePage.clickLogout();
 		quitDriver();
 	}
+	
+	@Test(priority = 3)
+	public void testIsForgotpasswordLinkPresent() {
+		initApplication();
+		HomePage homePage =new HomePage();
+		homePage.clickLogin();
+		LoginPage loginPage = new LoginPage();
+		String loginPageTitle = loginPage.getLoginPageTitle();
+		Assert.assertTrue(loginPageTitle.contains("Login"));
+		boolean flag = loginPage.isForgotpasswordLinkPresent();
+		Assert.assertTrue(flag);
+		homePage.clickLogout();
+		quitDriver();
+	}
 
 }
+
+
+
+
