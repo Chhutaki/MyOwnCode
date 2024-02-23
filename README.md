@@ -1,2 +1,1 @@
-# com.qa.webshop
-Selenium Automation Framework for Webshop Application
+This is to demonstrate the pull request
