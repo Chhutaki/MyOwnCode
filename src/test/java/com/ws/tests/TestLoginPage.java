@@ -5,6 +5,17 @@ import org.testng.annotations.Test;
 
 public class TestLoginPage extends BaseTest {
 	
+	@Test(priority = 4)
+	public void testInvalidEmailErr() {
+		logger = report.createTest("Validating Error Message for Invalid Email");
+		homePage.clickLogin();
+		logger.pass("clicked login link");
+		String emailErrMsg = loginPage.getInvalidEmailErrMsg();
+		System.out.println(emailErrMsg);
+		Assert.assertTrue(emailErrMsg.contains("enter a valid email address"));
+		logger.pass("verified invalid email error message");
+	}
+	
 
 	@Test(priority = 1)
 	public void testHomePageTitle() 

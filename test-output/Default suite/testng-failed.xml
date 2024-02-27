@@ -5,9 +5,10 @@
     <classes>
       <class name="com.ws.tests.TestLoginPage">
         <methods>
-          <include name="tearDown"/>
+          <include name="setUpReport"/>
+          <include name="testInvalidEmailErr"/>
           <include name="setUp"/>
-          <include name="testIsForgotpasswordLinkPresent"/>
+          <include name="tearDown"/>
         </methods>
       </class> <!-- com.ws.tests.TestLoginPage -->
     </classes>
